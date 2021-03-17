@@ -89,3 +89,14 @@ functions:
           path: mymusicsheetrepo/{id}
           method: delete
           authorizer: aws_iam
+  
+  # billing:
+  #   # Defines an HTTP API endpoint that calls the main function in billing.js
+  #   # - path: url path is /billing
+  #   # - method: POST request
+  #   handler: billing.main
+  #   events:
+  #     - http:
+  #         path: billing
+  #         method: post
+  #         authorizer: aws_iam
