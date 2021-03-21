@@ -47,6 +47,7 @@ functions:
       - http:
           path: mymusicsheetrepo
           method: post
+          cors: true
           authorizer: aws_iam
 
   get:
@@ -58,6 +59,7 @@ functions:
       - http:
           path: mymusicsheetrepo/{id}
           method: get
+          cors: true
           authorizer: aws_iam
 
   list:
@@ -69,6 +71,7 @@ functions:
       - http:
           path: mymusicsheetrepo
           method: get
+          cors: true
           authorizer: aws_iam
   
   update:
@@ -77,6 +80,7 @@ functions:
       - http:
           path: mymusicsheetrepo/{id}
           method: put
+          cors: true
           authorizer: aws_iam
 
   delete:
@@ -88,6 +92,7 @@ functions:
       - http:
           path: mymusicsheetrepo/{id}
           method: delete
+          cors: true
           authorizer: aws_iam
   
   # billing:
@@ -99,4 +104,10 @@ functions:
   #     - http:
   #         path: billing
   #         method: post
+  #         cors: true
   #         authorizer: aws_iam
+
+# Create our resources with separate CloudFormation templates
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
