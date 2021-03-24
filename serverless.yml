@@ -38,7 +38,7 @@ provider:
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
-  # - path: url path is /notes
+  # - path: url path is /mymusicsheetrepo
   # - method: POST request
   # - authorizer: authenticate using the AWS IAM role
   create:
@@ -64,7 +64,7 @@ functions:
 
   list:
     # Defines an HTTP API endpoint that calls the main function in list.js
-    # - path: url path is /mymusicsheetrepo
+    # - path: url path is /musicsheet
     # - method: GET request
     handler: list.main
     events:
