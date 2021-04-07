@@ -1,6 +1,6 @@
 {
   "name": "infrastructure",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "test": "sst test",
@@ -10,7 +10,7 @@
     "remove": "sst remove"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.94.1"
+    "@aws-cdk/assert": "1.94.1"
   },
   "dependencies": {
     "@aws-cdk/aws-cognito": "1.94.1",
