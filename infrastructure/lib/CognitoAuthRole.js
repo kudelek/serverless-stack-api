@@ -38,6 +38,17 @@ export default class CognitoAuthRole extends cdk.Construct {
       })
     );
 
+    this.role.addToPolicy(
+      new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
+        actions: [
+          "execute-api:Invoke"
+        ],
+        resources: ["*"],
+      })
+    );
+
+
     new cognito.CfnIdentityPoolRoleAttachment(
       this,
       "IdentityPoolRoleAttachment",
