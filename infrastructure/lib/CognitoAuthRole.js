@@ -44,7 +44,7 @@ export default class CognitoAuthRole extends cdk.Construct {
         actions: [
           "execute-api:Invoke"
         ],
-        resources: ["*"],
+        resources: ["https://api.mymusicsheetrepo.com/prod", "https://api.mymusicsheetrepo.com/dev"],
       })
     );
 
