@@ -12,4 +12,4 @@ Resources:
             Resource:
               !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGatewayRestApi}/*'
       Roles:
-        - 'Cognito_mymusicsheetidentitypoolAuth_Role'
+        - !ImportValue '${self:custom.sstApp}-CognitoAuthRole'
