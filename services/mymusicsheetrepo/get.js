@@ -10,6 +10,7 @@ export const main = handler(async (event, context) => {
       musicsheetId: event.pathParameters.id // The id of the note from the path
     },
   };
+  
 
   const result = await dynamoDb.get(params);
   if (!result.Item) {
