@@ -105,28 +105,9 @@ functions:
           authorizer: aws_iam
 
 # Create our resources with separate CloudFormation templates
-resources:
+resources: 
   # API Gateway Errors
   - ${file(resources/api-gateway-errors.yml)}
   # Cognito Identity Pool Policy
   - ${file(resources/cognito-policy.yml)}
-  
-  Resources:
-  GatewayResponseDefault4XX:
-    Type: 'AWS::ApiGateway::GatewayResponse'
-    Properties:
-      ResponseParameters:
-         gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
-         gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
-      ResponseType: DEFAULT_4XX
-      RestApiId:
-        Ref: 'ApiGatewayRestApi'
-  GatewayResponseDefault5XX:
-    Type: 'AWS::ApiGateway::GatewayResponse'
-    Properties:
-      ResponseParameters:
-         gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
-         gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
-      ResponseType: DEFAULT_5XX
-      RestApiId:
-        Ref: 'ApiGatewayRestApi'
+    
