@@ -24,6 +24,8 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: us-east-1
+  scoreCardsBucketName: "${self:custom.stage}-score-cards"
+
 
   # These environment variables are made available to our functions
   # under process.env.
@@ -44,6 +46,17 @@ provider:
       # the specific table for the stage
       Resource:
         - !ImportValue '${self:custom.sstApp}-TableArn'
+    - Effect: Allow
+      Action:
+        - s3:*Object
+      Resource:
+        - "arn:aws:s3:::mymusicsheetrepo-app-upload/*"
+    - Effect: Allow
+      Action:
+        - s3:GetBucketLocation
+      Resource:
+        - "arn:aws:s3:::mymusicsheetrepo-app-upload"
+
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
