@@ -48,11 +48,6 @@ provider:
         - !ImportValue '${self:custom.sstApp}-TableArn'
     - Effect: Allow
       Action:
-        - s3:PutObjectAcl
-      Resource:
-        - "arn:aws:s3:::mymusicsheetrepo-app-upload"
-    - Effect: Allow
-      Action:
         - s3:*Object
       Resource:
         - "arn:aws:s3:::mymusicsheetrepo-app-upload/*"
