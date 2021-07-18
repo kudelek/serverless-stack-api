@@ -1,5 +1,9 @@
 # My Music Sheet Repo
 
+### demo: https://mymusicsheetrepo.com
+
+##
+
 This github repository contains Back-End part of my "My Music Sheet Repo" project - **my biggest project so far!**
 
 ### On this site you can:
@@ -8,12 +12,6 @@ This github repository contains Back-End part of my "My Music Sheet Repo" projec
 - add your music sheet file as an attachment (of any format for now, up to 10MB)
 - download your music sheet from your account
 
-##
-
-### Here's the link to the Front-End part:
-https://github.com/kudelek/serverless-stack-mymusicsheetrepo-client
-
-##
 
 ### This Back-End consists of:
 - Serverless Stack,
@@ -25,7 +23,11 @@ https://github.com/kudelek/serverless-stack-mymusicsheetrepo-client
   - API Gateway for maintaining API endpoints,
 - Seed for CI/CD pipeline (dev/prod),
 
+##
 
-### demo: https://mymusicsheetrepo.com
+### Here's the link to the Front-End part:
+https://github.com/kudelek/serverless-stack-mymusicsheetrepo-client
+
+
 
 # Enjoy!
