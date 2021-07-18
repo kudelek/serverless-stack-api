@@ -1,4 +1,4 @@
-# mymusicsheetrepo
+# My Music Sheet Repo
 
 This github repository contains Back-End part of my "My Music Sheet Repo" project - my biggest project so far!
 
